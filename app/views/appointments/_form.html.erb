@@ -28,7 +28,7 @@
               <% end %>
           
             <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name"> Da <span class="required">*</span>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name"> Date of Appointment <span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <%= form.date_select :da, id: :appointment_da, class: "form-control col-md-7 col-xs-12"%>
@@ -38,7 +38,7 @@
 
 
             <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">reason <span class="required">*</span>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Reason <span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <%= form.text_area :reason, id: :appointment_reason, class: "form-control col-md-7 col-xs-12" %>
@@ -46,7 +46,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">diagnostics</label>
+              <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Diagnostics</label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <%= form.text_area :diagnostics, id: :appointment_diagnostics, class: "form-control col-md-7 col-xs-12" %>
                
@@ -55,7 +55,7 @@
             </div>
             
             <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12">dn<span class="required">*</span>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">Next Appointment Date<span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                  <%= form.date_select :dn, id: :appointment_dn , class: "form-control col-md-7 col-xs-12"%>
@@ -64,7 +64,7 @@
             </div>
             
              <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12">prescription <span class="required">*</span>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">Prescription <span class="required">*</span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <%= form.text_area :prescription, id: :appointment_prescription, class: "form-control col-md-7 col-xs-12" %>
@@ -73,7 +73,7 @@
             </div>
 
              <div class="form-group">
-              <label class="control-label col-md-3 col-sm-3 col-xs-12">comments </span>
+              <label class="control-label col-md-3 col-sm-3 col-xs-12">Comments </span>
               </label>
               <div class="col-md-6 col-sm-6 col-xs-12">
                 <%= form.text_area :comments, id: :appointment_comments,class: "form-control col-md-7 col-xs-12" %>
