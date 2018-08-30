@@ -12,18 +12,36 @@
       <!-- sidebar menu -->
       <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
         <div class="menu_section">
-          <ul class="nav side-menu">
 
-            <li><%= link_to "Patients", patients_path %></li>
+            
+          <ul class="nav side-menu" style="">
+            <li>
+              <%= link_to patients_path do  %>
+                <i class="fa fa-user"></i> Patients
+              <% end %>
+            </li>
 
-            <li><%= link_to "Doctors", doctors_path %></li>
-            <li><%= link_to "Appointments", appointments_path %></li>
+            <li>
+              <%= link_to doctors_path do  %>
+                <i class="fa fa-user-md"></i> Doctors
+              <% end %>
+            </li>
+
+            
+            <li>
+              <%= link_to appointments_path do  %>
+                <i class="fa fa-calendar"></i> Appointments
+              <% end %>
+            </li>
+
+
+           
+          </ul>
 
            <!--  <li><a><i class="fa fa-desktop"></i> Create Appointment</a>
             </li>
             <li><a><i class="fa fa-table"></i> View Appintments</span></a>
             </li> -->
-          </ul>
         </div>
 
       </div>
@@ -40,7 +58,8 @@
         <a data-toggle="tooltip" data-placement="top" title="" data-original-title="Lock">
           <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
         </a>
-        <a data-toggle="tooltip" data-placement="top" title="" href="login.html" data-original-title="Logout">
+
+        <a data-toggle="tooltip" data-placement="top" title="" href="#" data-original-title="Logout">
 
           <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
         </a>
