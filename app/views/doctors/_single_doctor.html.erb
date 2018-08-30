@@ -1,0 +1,20 @@
+<li>
+  <span class="image">
+    <%= image_tag "img.jpg" %>
+  </span>
+  <span class="message">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
+  <span class="message">
+    <span class="image">
+      <p>FIRST NAME: <%= doctor.first_name %></p>  
+      <p>LAST NAME: <%= doctor.last_name %></p>
+      <p>DATE OF BIRTH: <%= doctor.db %></p>
+    </span>
+    <span class="image">
+      <%= link_to 'History', doctor_path(doctor), class: "btn btn-primary btn-xs" %>
+      <%= link_to 'Edit', edit_doctor_path(doctor), class: "btn btn-info btn-xs" %>
+      <%= link_to 'Destroy', doctor_path(doctor), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %>
+    </span>
+  </span>
+</li>

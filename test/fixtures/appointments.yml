@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  da: 2018-08-29
+  reason: MyText
+  diagnostics: MyText
+  dn: 2018-08-29
+  prescription: MyText
+  comments: MyText
+  user: one
+
+two:
+  da: 2018-08-29
+  reason: MyText
+  diagnostics: MyText
+  dn: 2018-08-29
+  prescription: MyText
+  comments: MyText
+  user: two

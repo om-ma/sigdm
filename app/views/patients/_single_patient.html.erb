@@ -1,0 +1,22 @@
+<li>
+  <span class="image">
+    <%= image_tag "img.jpg" %>
+  </span>
+  <span class="message">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
+  <span class="message">
+    <span class="image">
+      <p>FIRST NAME: <%= patient.first_name %></p>  
+      <p>LAST NAME: <%= patient.last_name %></p>
+      <p>DATE OF BIRTH: <%= patient.db %></p>
+    </span>
+    <span class="image">
+      <%= link_to 'History', patient_path(patient), class: "btn btn-primary btn-xs" %>
+      <%= link_to 'Edit', edit_patient_path(patient), class: "btn btn-info btn-xs" %>
+      <%= link_to 'Destroy', patient_path(patient), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %>
+      <%= link_to 'Create Appointment', new_appointment_path(patient_id: patient.id), class: "btn btn-primary btn-xs"  %>
+      
+    </span>
+  </span>
+</li>

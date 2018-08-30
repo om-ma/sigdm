@@ -1,0 +1,110 @@
+ <div class="right_col" role="main" style="min-height: 1063px;">
+  <div class="">
+    <div class="page-title">
+      <div class="title_left">
+        <h3></h3>
+      </div>
+
+      <div class="title_right">
+        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-12 ">
+      <p id="notice"><%= notice %></p>
+      <div class="x_panel">
+        <div class="x_title">
+          <h2>History </h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Settings 1</a>
+                </li>
+                <li><a href="#">Settings 2</a>
+                </li>
+              </ul>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Date of Birth</th>
+                <th>Sex</th>
+                <th>Tel 1</th>
+                <th>Tel 2</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><%= @doctor.first_name%></td>
+                <td><%= @doctor.last_name%></td>
+                <td><%= @doctor.db%></td>
+                <td><%= @doctor.sex%></td>
+                <td><%= @doctor.tel1%></td>
+                <td><%= @doctor.tel2%></td>
+                <td><%= @doctor.address%></td>
+                
+                
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <%= link_to 'Edit', edit_doctor_path(@doctor), class: "btn btn-primary btn-xs" %> |
+        <%= link_to 'Back', doctors_path,class: "btn btn-info btn-xs" %>
+      </div>
+      
+    </div>
+
+    <div class="col-md-12 ">
+      <div class="x_panel">
+        <div class="x_title">
+          <h2>Appointments </h2>
+          <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Settings 1</a>
+                </li>
+                <li><a href="#">Settings 2</a>
+                </li>
+              </ul>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+          </ul>
+          <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+          <ul class="list-unstyled msg_list">
+            <% @doctor.doctor_appointments.each do |appointment| %>
+              <%= render partial: "/appointments/single_appointment", locals: {appointment: appointment} %>
+            <% end %>
+          </ul>
+
+        </div>
+    <div class="clearfix"></div>
+    
+  </div>
+</div>

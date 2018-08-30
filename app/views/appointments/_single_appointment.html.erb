@@ -1,0 +1,21 @@
+<li>
+  <span class="image">
+  </span>
+  <span class="message">
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span>
+  <span class="message">
+    <span class="image">
+      <p>Date Appointment: <%= appointment.da %></p>  
+      <p>DR : <%= appointment.doctor.present? ? appointment.doctor.first_name  : ""%></p>
+      <p>Reason Appointment: <%= appointment.reason %></p>
+      <p>Date Next Appointment : <%= appointment.dn %></p>
+      <p>COMMENT: <%= appointment.comments %></p>
+    </span>
+    <span class="image">
+      <%= link_to 'Show', appointment_path(appointment), class: "btn btn-primary btn-xs" %>
+      <%= link_to 'Edit', edit_appointment_path(appointment), class: "btn btn-info btn-xs" %>
+      <%= link_to  'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger btn-xs" %>
+    </span>
+  </span>
+</li>
